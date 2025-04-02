@@ -38,56 +38,86 @@ h1,
 h2,
 h3 {
     margin: 0;
+    padding: 0;
 }
 
 p {
     margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--rose-50);
 }
 
-/* TITLE */
-.container__title {
-    font-family: var(--font);
-    color: var(--rose-900);
-    font-weight: 800;
-    font-size: 4rem;
-    line-height: 120px;
-    text-align: left;
+/* LISTA DE PRODUCTOS */
+.product__list{
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem;
+    gap: 3.2rem;
 }
 
-.productos {
-    width: 32.7rem;
-    height: 347rem;
-    margin: 0 auto;
-}
-
-@media(min-width: 768px) {
-    .productos {
-        width: 68.8rem;
-        height: 143rem;
-
+@media(min-width: 768px){
+    .product__list{
+        padding: 4rem;
     }
 }
 
-@media(min-width: 1024px) {
-    .productos {
+@media(min-width: 992px){
+    .product__list{
+        padding: 8.8rem;
+    }
+}
+
+@media(min-width: 1440px){
+    .product__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+}
+
+@media(min-width: 768px){
+    .product__cards{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem 2.4rem;
+    }
+}
+
+@media(min-width: 1440px){
+    .product__cards{
         width: 80rem;
-        height: 118rem;
+        grid-column: 1;
     }
 }
 
-/* PRODUCTO ITEM */
-.producto__item{
-    width: 100%;
-    height: 31.9rem;
+.product__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
+/* TITLE */
+.title__product{
+    font-family: var(--font);
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 120px;
+    color: var(--rose-900);
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* PRODUCTO */
 .img__producto{
     width: 100%;
-    height: 21rem;
+    height: 21.2rem;
     border-radius: .8rem;
 }
 
@@ -98,69 +128,131 @@ body {
     }
 }
 
-@media(min-width: 768px){
+@media(min-width: 992px){
     .img__producto{
         width: 25rem;
-        height: 24rem;
+        height: 26.2rem;
     }
 }
 
-/* BOTON PRODUCTO */
-.productos__btn{
+/* BOTON AGREGAR */
+
+.btn__producto{
     display: flex;
+    align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 @media(min-width: 768px){
-    .productos__btn{
-        margin-left: 4rem;
-        justify-content: flex-start;
+    .btn__producto{
+        display: block;
+        margin-left: 3rem;
     }
 }
 
 .btn{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: .7rem;
     width: 16rem;
     height: 4.4rem;
-    background-color: var(--white);
-    border-radius: 2rem;
     border: .1rem solid var(--rose-400);
+    background-color: var(--white);
+    border-radius: 10rem;
     font-family: var(--font);
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--rose-900);
-    gap: .5rem;
     margin-top: -2rem;
 }
 
-/* INFO PRODUCTO */
-.info__producto{
+/* INFORMACION PRODUCTO */
+
+.info__categoria{
     display: flex;
     flex-direction: column;
-    gap: .7rem;
+    gap: .4rem;
+    margin-top: 1.5rem;
 }
-.producto_name{
+
+.categoria__name{
     font-family: var(--font);
-    color: var(--rose-500);
     font-size: 1.4rem;
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--rose-500);
     text-align: left;
 }
 
-.producto__title{
+.categoria__producto{
     font-family: var(--font);
-    font-weight: 500;
     font-size: 1.6rem;
     color: var(--rose-900);
     text-align: left;
+    font-weight: 600;
 }
 
-.producto__price{
+.categoria__precio{
     font-family: var(--font);
     font-size: 1.6rem;
     color: var(--red);
+    text-align: left;
     font-weight: 500;
+}
+
+
+/* CARRITO INFO */
+
+.car{
+    width: 100%;
+    height: 29.9rem;
+    background-color: var(--white);
+    border-radius: 1.2rem;
+}
+
+@media(min-width: 1440px){
+    .car{
+        width: 38.4rem;
+        height: 29.9rem;
+        margin-top: -7rem;
+    }
+}
+
+.car__info{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 2.4rem;
+}
+
+.car__title{
+    font-family: var(--font);
+    color: var(--red);
+    font-size: 2.4rem;
+    line-height: auto;
+    font-weight: bold;
     text-align: left;
 }
+
+.ilustration__card{
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 0;
+    margin: 0 auto;
+}
+
+.ilustration__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__itmes{
+    font-family: var(--font);
+    color: var(--rose-500);
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+}
+

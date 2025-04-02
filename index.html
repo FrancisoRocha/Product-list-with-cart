@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,33 @@
   <title>Frontend Mentor | Product list with cart</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-
   <main class="container">
-    <div class="productos">
-      <h1 class="container__title">Desserts</h1>
-      <div class="producto__item">
-        <picture>
-          <!-- Imagen para pantallas grandes (desktop) -->
-          <source media="(min-width: 1024px)" srcset="./assets/images/image-waffle-desktop.jpg">
-          <!-- Imagen para pantallas medianas (mobile) -->
-          <source media="(min-width: 768px)" srcset="./assets/images/image-waffle-tablet.jpg">
-          <!-- Imagen para pantallas pequeñas (mobile) -->
-          <img src="./assets/images/image-waffle-mobile.jpg" alt="producto" class="img__producto">
-        </picture>
-        <!-- BOTON AGREGAR AL CARRITO -->
-        <div class="productos__btn">
-          <button type="submit" class="btn">
-            <img src="./assets/images/icon-add-to-cart.svg" alt="icon add to cart" class="icon">
-            Add to Cart
-          </button>
-        </div>
-        <!-- INFO PRODUCTO -->
-        <div class="info__producto">
-          <p class="producto_name">Waffle</p>
-          <p class="producto__title">Waffle with Berries</p>
-          <p class="producto__price">$6.50</p>
+
+    <div class="product__list">
+      <h1 class="title__product">desserts</h1>
+      <div class="product__cards">
+        <!-- PRODUCTOS -->
+      </div>
+      <!-- CARRITO -->
+      <div class="car">
+        <div class="car__info">
+          <p class="car__title">You Cart <span>(0)</span></p>
+          <div class="ilustration__card">
+            <img src="./assets/images/illustration-empty-cart.svg" alt="ilustration car" class="img__card">
+            <p class="text__itmes">Your added items will appear here</p>
+          </div>
         </div>
       </div>
-    </div>
 
   </main>
 
-
-  <script src="./js/app.js"></script>
-  
+  <script src="./js/app.js" type="module"></script>
 </body>
 </html>
