@@ -151,6 +151,12 @@ body {
     }
 }
 
+@media(min-width: 1024px){
+    .btn__producto{
+        margin-left: 5rem;
+    }
+}
+
 .btn{
     display: flex;
     align-items: center;
@@ -167,6 +173,39 @@ body {
     color: var(--rose-900);
     margin-top: -2rem;
 }
+
+.acciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    color: var(--white);
+    gap: 4rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--red);
+    border: .1rem solid var(--white);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.number{
+    font-family: var(--font);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* CLICK EN BOTON Y BORDE ACTIVADO DE LA IMGANE */
+.producto--activo{
+    border: .2rem solid var(--red);
+} 
 
 /* INFORMACION PRODUCTO */
 

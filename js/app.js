@@ -1,22 +1,12 @@
 import { obtenerMenu } from "./Api.js";
+import botonCarrito from "./boton.js";
 
-const productoCard = document.querySelector('.product__cards');
+export const productoCard = document.querySelector('.product__cards');
 
-// EVENTO DE CLICK EN LOS BOTONES
-productoCard.addEventListener('click', (e) => {
-
-    const button = e.target.closest('btn')
-
-    if (button) {
-        const producto = button.closest('.product__item');
-        const { name, price } = producto.dataset;
-
-        console.log(`Has añadido el producto ${name} con un costo de $${price}`)
-    }
-
-})
-
-document.addEventListener('DOMContentLoaded', mostrarMenu);
+document.addEventListener('DOMContentLoaded', () =>{
+    mostrarMenu();
+    botonCarrito();
+});
 
 async function mostrarMenu() {
 
@@ -47,14 +37,14 @@ async function mostrarMenu() {
             </picture>
             <!-- BOTON CARRITO -->
             <div class="btn__producto">
-                <button type="submit" class="btn">
-                <img src="./assets/images/icon-add-to-cart.svg" alt="icon add to cart" class="icon__cart">
-                Add to cart
-                </button>
+                <div class="btn">
+                    <img src="./assets/images/icon-add-to-cart.svg" alt="icon add to cart" class="icon__cart">
+                    Add to cart
+                </div>
             </div>
             <div class="info__categoria">
-                <p class="categoria__name">${name}</p>
-                <p class="categoria__producto">${category}</p>
+                <p class="categoria__name">${category}</p>
+                <p class="categoria__producto">${name}</p>
                 <p class="categoria__precio">$${price.toFixed(2)}</p>
                 </div>`;
             productoCard.appendChild(cardItem);
