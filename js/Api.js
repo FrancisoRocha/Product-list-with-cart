@@ -1,14 +1,14 @@
-const Api = '../data.json';
+const Api = "../data.json";
 
 // OBTENER DATOS DEL MENU
 export const obtenerMenu = async () => {
-    try {
-        const resultado = await fetch(Api);
-        const menu = await resultado.json();
-        return menu;
-    } catch (error) {
-        console.log(error);
-    }
-}
+  try {
+    const resultado = await fetch(Api);
+    const menu = await resultado.json();
+    return menu;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-
+console.log("Hola mundo");
